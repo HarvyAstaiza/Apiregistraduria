@@ -1,3 +1,3 @@
-from myapp import main
+from myapp.main import loadFileConfig
 
-app = main
+app = loadFileConfig()
