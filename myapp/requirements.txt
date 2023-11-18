@@ -5,13 +5,10 @@ colorama
 dnspython
 Flask
 Flask-Cors
-Flask-JWT-Extended
-itsdangerou
+itsdangerous
 Jinja2
 MarkupSafe
-PyJWT
 pymongo
-six
 waitress
-Werkzeug
 Gunicorn
+Werkzeug
