@@ -34,7 +34,7 @@ class ControladorResultado():
         elPartido = Partido(self.repositorioPartido.findById(id_partido))
         nuevaResultado.candidato = elCandidato
         nuevaResultado.mesa = laMesa
-        nuevaResultado=.partido= elPartido
+        nuevaResultado.partido= elPartido
         return self.repositorioResultado.save(nuevaResultado)
 
     def show(self, id):
