@@ -27,12 +27,14 @@ class ControladorResultado():
         print("Listar todas los Resultados")
         return self.repositorioResultado.findAll()
 
-    def create(self, infoResultado, id_candidato, id_mesa):
+    def create(self, infoResultado, id_candidato, id_mesa,id_partido):
         nuevaResultado = Resultado(infoResultado)
         elCandidato = Candidato(self.repositorioCandidato.findById(id_candidato))
         laMesa = Mesa(self.repositorioMesa.findById(id_mesa))
+        elPartido = Partido(self.repositorioPartido.findById(id_partido))
         nuevaResultado.candidato = elCandidato
         nuevaResultado.mesa = laMesa
+        nuevaResultado=.partido= elPartido
         return self.repositorioResultado.save(nuevaResultado)
 
     def show(self, id):
