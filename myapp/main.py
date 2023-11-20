@@ -160,10 +160,10 @@ def getResultado(id):
     return jsonify(json)
 
 
-@app.route("/resultados/candidato/<string:id_candidato>/mesa/<string:id_mesa>", methods=['POST'])
-def crearResultado(id_candidato, id_mesa):
+@app.route("/resultados/candidato/<string:id_candidato>/mesa/<string:id_mesa>/partido/<string:id_partido>", methods=['POST'])
+def crearResultado(id_candidato, id_mesa, id_partido):
     data = request.get_json()
-    json = miControladorResultado.create(data, id_candidato, id_mesa)
+    json = miControladorResultado.create(data, id_candidato, id_mesa, id_partido)
     return jsonify(json)
 
 
